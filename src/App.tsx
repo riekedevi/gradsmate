@@ -12,7 +12,6 @@ import {
   MapPin,
   MessageCircle,
   ShieldCheck,
-  Sparkles,
   Users,
   X,
 } from 'lucide-react';
@@ -99,7 +98,7 @@ function App() {
           <div className="hero-glow hero-glow-two" />
           <div className="hero-grid content-width">
             <div className="hero-copy reveal from-left" ref={heroCopyRef}>
-              <div className="eyebrow"><Sparkles size={15} /> Teman wisuda, siap bantu di hari istimewa</div>
+              <div className="eyebrow">Teman wisuda, siap bantu di hari istimewa</div>
               <h1>Kamu wisuda.<br /><em>Kami yang bantu.</em></h1>
               <p className="hero-lead">Pendamping pribadi hari wisudamu. Kami mengurus detailnya sehingga kamu bisa menikmati momen tanpa ribet.</p>
               <div className="hero-actions">
