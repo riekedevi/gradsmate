@@ -15,6 +15,7 @@ import {
   Users,
   X,
 } from 'lucide-react';
+import { BookingForm } from '@/components/BookingForm';
 import { useReveal } from '@/hooks/useReveal';
 
 const heroImage =
@@ -71,7 +72,6 @@ function App() {
   const locationCopyRef = useReveal<HTMLDivElement>();
   const faqHeadingRef = useReveal<HTMLDivElement>();
   const faqItemRefs = [useReveal<HTMLDivElement>(), useReveal<HTMLDivElement>(), useReveal<HTMLDivElement>(), useReveal<HTMLDivElement>(), useReveal<HTMLDivElement>()];
-  const finalCtaRef = useReveal<HTMLDivElement>();
 
   return (
     <div className="site-shell">
@@ -202,14 +202,7 @@ function App() {
           </div>
         </section>
 
-        <section className="final-cta section-padding" id="booking">
-          <div className="final-cta-inner reveal" ref={finalCtaRef}>
-            <div className="eyebrow"><Heart size={15} fill="currentColor" /> Your day, your story</div>
-            <h2>Satu hari.<br /><em>Satu pencapaian.<br />Banyak kenangan.</em></h2>
-            <p>Siap menikmati wisudamu tanpa beban?</p>
-            <a className="button button-light" href="#packages">Booking GradsmateAssist <ArrowRight size={18} /></a>
-          </div>
-        </section>
+        <BookingForm />
       </main>
 
       <footer className="footer"><div className="content-width footer-inner"><a className="brand" href="#home"><img className="brand-logo footer-logo" src="/Salinan_dari_Teks_paragraf_Anda_(5).png" alt="GradsmateAssist" /></a><div className="footer-links"><a href="#home">Beranda</a><a href="#packages">Paket</a><a href="#how-it-works">Cara kerja</a><a href="#faq">Tanya jawab</a></div><p>© 2026 GradsmateAssist. Dibuat untuk momen yang berarti.</p></div></footer>
