@@ -21,7 +21,7 @@ const heroImage =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuCOZvTVqUepLHRZEDe41U6HqiEwpMaHCvYgFZXx0k8i0tLNwUWDUnCz6sgVD6p1BTQSX8qfUXvJy6l8qSA9snW9wj_gQ96YLgKXDH8Y_mjpIA5z0JOuWJw_FlXOUSK-_tcq_KrUO6S0-4_7mccXUdEqTxK2ZRsYAgPfs9au4-yRatO3QHKEZE_W3UcaZL_cuoS3fh1SQqHLJlXaEjOSSA3111sEA6xJs-jW5ivYegwc-sJtAFaxV7Z3iA';
 
 const services = [
-  { icon: Camera, title: 'Abadikan momen', text: 'Bantu mengambil foto dan video yang natural sepanjang hari.' },
+  { icon: Camera, title: 'Abadikan momen', text: 'Bantu mengambil foto dan video menggunakan perangkat milikmu sendiri.' },
   { icon: Luggage, title: 'Jaga barang bawaan', text: 'Biar tanganmu bebas memeluk orang-orang tersayang.' },
   { icon: ShieldCheck, title: 'Siaga kebutuhan kecil', text: 'Dari touch-up sampai perlengkapan darurat, kami siap.' },
   { icon: CalendarCheck, title: 'Dampingi hari H', text: 'Bantu mengatur detail agar jadwal wisudamu tetap lancar.' },
@@ -29,7 +29,7 @@ const services = [
 ];
 
 const packages = [
-  { name: 'Sweet Assist', description: 'Bantuan dasar untuk melancarkan harimu.', features: ['Pendampingan 3 jam', 'Bantu dokumentasi HP', 'Bantu barang bawaan'], featured: false },
+  { name: 'Sweet Assist', description: 'Bantuan dasar untuk melancarkan harimu.', features: ['Pendampingan 3 jam', 'Dokumentasi dengan HP milikmu', 'Bantu barang bawaan'], featured: false },
   { name: 'Special Assist', description: 'Paket lengkap yang paling disukai wisudawan.', features: ['Pendampingan 5 jam', 'Dokumentasi momen penting', 'Bantu barang dan kebutuhan kecil', 'Koordinasi rundown'], featured: true },
   { name: 'Full Assist', description: 'Pelayanan maksimal dari awal hingga akhir acara.', features: ['Pendampingan 8 jam', 'Semua layanan Special Assist', 'Bantuan persiapan sebelum acara', 'Pendampingan keluarga'], featured: false },
 ];
@@ -39,6 +39,7 @@ const faqs = [
   ['Bisa request untuk membawakan buket bunga?', 'Tentu. Membantu membawa buket, hadiah, dan barang personal adalah bagian dari layanan kami.'],
   ['Bagaimana jika acara molor?', 'Kami fleksibel dan akan berkoordinasi denganmu terkait penambahan waktu agar tetap terasa nyaman.'],
   ['Apakah bisa request pendamping perempuan?', 'Bisa. Sampaikan preferensimu saat konsultasi dan kami akan mencocokkan pendamping yang sesuai.'],
+  ['Apakah ada jasa edit foto?', 'Tidak. Kami tidak menyediakan jasa edit foto. Kami hanya membantu mengambil foto dan video menggunakan perangkat milik wisudawan.'],
   ['Apakah melayani keluarga atau teman juga?', 'Bisa. Paket Full Assist cocok untuk kamu yang ingin keluarga ikut merasa lebih tenang.'],
 ];
 
