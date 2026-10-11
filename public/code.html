@@ -1,0 +1,439 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GradsmateAssist - Kamu wisuda. Kami yang bantu. ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-highest": "#e8e1e2",
+                "primary-fixed": "#ffd9e1",
+                "inverse-surface": "#333031",
+                "on-surface-variant": "#544246",
+                "inverse-primary": "#ffb1c6",
+                "tertiary-fixed": "#ffd9dd",
+                "secondary-fixed-dim": "#ffb1c1",
+                "on-secondary-fixed-variant": "#6d3543",
+                "surface-container": "#f3eced",
+                "on-tertiary-fixed": "#390914",
+                "on-primary-container": "#71183c",
+                "surface-container-high": "#ede6e7",
+                "surface-card": "#FFFFFF",
+                "success-mint": "#E0F2F1",
+                "primary": "#9e3c5e",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-container": "#7b404f",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#9e3c5e",
+                "surface-variant": "#e8e1e2",
+                "tertiary-container": "#df919b",
+                "accent-soft": "#FCE4EC",
+                "tertiary": "#8c4b55",
+                "tertiary-fixed-dim": "#ffb2bc",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "on-background": "#1d1b1c",
+                "secondary-container": "#ffb1c1",
+                "inverse-on-surface": "#f6eff0",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#ffb1c6",
+                "on-secondary-fixed": "#380a19",
+                "surface-dim": "#dfd8d9",
+                "surface-base": "#FFF5F7",
+                "surface-container-low": "#f9f2f3",
+                "on-primary-fixed-variant": "#7f2446",
+                "secondary": "#894c5a",
+                "primary-container": "#f682a6",
+                "on-error": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#632a34",
+                "surface-bright": "#fff8f9",
+                "outline": "#877276",
+                "background": "#f682a6",
+                "surface": "#f682a6",
+                "on-tertiary-fixed-variant": "#70343e",
+                "secondary-fixed": "#ffd9df",
+                "on-primary-fixed": "#3f001b",
+                "on-surface": "#ffffff",
+                "outline-variant": "#dac0c5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "base": "8px",
+                "xl": "80px",
+                "xs": "4px",
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "sm": "12px",
+                "md": "24px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Be Vietnam Pro"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg-mobile": [
+                        "Be Vietnam Pro"
+                ],
+                "display-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "label-sm": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg": [
+                        "Be Vietnam Pro"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .fill-icon { font-variation-settings: 'FILL' 1; }
+        
+        /* Entrance Animations */
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Soft Shadow Level 1 */
+        .shadow-soft { box-shadow: 0 10px 30px -15px rgba(183, 110, 121, 0.08); }
+        .shadow-soft-hover:hover { box-shadow: 0 15px 40px -10px rgba(183, 110, 121, 0.15); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container-highest/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-[0_10px_30px_-15px_rgba(183,110,121,0.08)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-[1280px] mx-auto h-20">
+<a class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim hover:scale-105 transition-transform duration-200" href="#">
+<img alt="GradsmateAssist Logo" class="h-10 w-10 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXyDYkQG1jLG6ytiWVSreD-bAAUyJQjcoVtbY4-3fCC71pos_ooalpqvJem5SZdupw5IRV8Qfkw3igxjXBhxZd_ETbMZaGuJWhnJGvunhq2nhq2nZm2P9o1UigiTsA7PEjHICXKJEkQOC4ZQcsZI72xocpstOIXcPGnd8_4lB7m1IfOFxjwbneAe2ys9mv3IxdauEhW01oudeREah4UQCOXRLfVOS8pmaiX0wlxj_Ks0zEOBhMO8QCykKv5Uv7UFoTGoxT0kU">
+            GradsmateAssist
+        </a>
+<div class="hidden md:flex items-center gap-6 font-label-md text-label-md">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#home">Beranda</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#packages">Paket</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#how-it-works">Cara Kerja</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#why-us">Mengapa Kami</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#faq">Tanya Jawab</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center h-12 px-6 rounded-full bg-secondary text-on-secondary font-label-md text-label-md hover:scale-105 transition-transform duration-200 shadow-soft" href="#packages">
+            Pesan Sekarang ♡
+        </a>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-xl overflow-hidden px-margin-mobile md:px-margin-desktop bg-background" id="home">
+<div class="relative z-10 max-w-[1280px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="flex flex-col items-start gap-md fade-up">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+                    Teman Wisuda, Siap Bantu di Hari Istimewa. 🎓
+                </div>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-lg">
+                    Kamu wisuda.<br>Kami yang bantu. ♡
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface max-w-md">
+                    Pendamping pribadi hari wisudamu. Kami mengurus detailnya sehingga kamu bisa menikmati momennya tanpa ribet.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md hover:scale-105 transition-transform duration-200 shadow-soft" href="#packages">
+                        Lihat Paket
+                    </a>
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-full border-2 border-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest hover:text-primary transition-colors duration-200" href="#how-it-works">
+                        Cara Kerja
+                    </a>
+</div>
+</div>
+<div class="relative w-full aspect-square md:aspect-auto md:h-[600px] fade-up delay-200 rounded-2xl overflow-hidden shadow-soft">
+<img class="w-full h-full object-cover" data-alt="Graduation celebration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOZvTVqUepLHRZEDe41U6HqiEwpMaHCvYgFZXx0k8i0tLNwUWDUnCz6sgVD6p1BTQSX8qfUXvJy6l8qSA9snW9wj_gQ96YLgKXDH8Y_mjpIA5z0JOuWJw_FlXOUSK-_tcq_KrUO6S0-4_7mccXUdEqTxK2ZRsYAgPfs9au4-yRatO3QHKEZE_W3UcaZL_cuoS3fh1SQqHLJlXaEjOSSA3111sEA6xJs-jW5ivYegwc-sJtAFaxV7Z3iA">
+<!-- Decorative sparkle -->
+<span class="material-symbols-outlined absolute top-4 right-4 text-surface-container-lowest text-4xl opacity-80">auto_awesome</span>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-lg px-margin-mobile md:px-margin-desktop bg-background relative text-center">
+<div class="max-w-[800px] mx-auto fade-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">WISUDA SEKALI, KENANGANNYA SELAMANYA. 🌷</h2>
+<p class="font-body-lg text-body-lg text-on-surface">
+                Jadikan momen wisudamu lebih tenang dan fokus merayakan kebahagiaan. Fokus pada Menikmati momen dan Mengabadikan kenangan bersama orang tersayang. Kami bantu sisanya.
+            </p>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-primary-container relative">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-lg fade-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">APA YANG BISA KAMI BANTU?</h2>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl mx-auto">
+                    Berbagai layanan untuk memastikan hari wisudamu berjalan lancar dan penuh memori indah.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-md">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft shadow-soft-hover transition-all duration-300 fade-up hover:-translate-y-2">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<h3 class="font-headline-md text-[18px] mb-2 text-primary">Bantu Abadikan Momen</h3>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft shadow-soft-hover transition-all duration-300 fade-up delay-100 hover:-translate-y-2">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">luggage</span>
+</div>
+<h3 class="font-headline-md text-[18px] mb-2 text-primary">Bantu Barang Bawaan</h3>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft shadow-soft-hover transition-all duration-300 fade-up delay-200 hover:-translate-y-2">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-[18px] mb-2 text-primary">Bantu Kebutuhan Kecil</h3>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft shadow-soft-hover transition-all duration-300 fade-up delay-300 hover:-translate-y-2">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+<h3 class="font-headline-md text-[18px] mb-2 text-primary">Bantu di Hari H</h3>
+</div>
+<!-- Feature 5 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft shadow-soft-hover transition-all duration-300 fade-up delay-400 hover:-translate-y-2">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<h3 class="font-headline-md text-[18px] mb-2 text-primary">Jadi Teman Tambahan</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background relative" id="packages">
+<div class="max-w-[1280px] mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg fade-up">PILIH PAKET WISUDAMU 🎀</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="border border-surface-container-lowest rounded-2xl p-lg flex flex-col gap-4 fade-up bg-surface-container-lowest">
+<h3 class="font-headline-md text-primary">SWEET ASSIST</h3>
+<p class="text-on-surface-variant flex-grow">Bantuan dasar untuk melancarkan harimu.</p>
+<button class="mt-4 px-6 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Pilih Paket</button>
+</div>
+<div class="border-2 border-surface-container-lowest rounded-2xl p-lg flex flex-col gap-4 fade-up delay-100 bg-surface-container-highest relative scale-105 shadow-soft">
+<span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full">PALING POPULER</span>
+<h3 class="font-headline-md text-primary">SPECIAL ASSIST</h3>
+<p class="text-on-surface-variant flex-grow">Paket lengkap yang paling disukai wisudawan.</p>
+<button class="mt-4 px-6 py-3 rounded-full bg-primary text-white font-bold hover:scale-105 transition-transform">Pilih Paket</button>
+</div>
+<div class="border border-surface-container-lowest rounded-2xl p-lg flex flex-col gap-4 fade-up delay-200 bg-surface-container-lowest">
+<h3 class="font-headline-md text-primary">FULL ASSIST</h3>
+<p class="text-on-surface-variant flex-grow">Pelayanan maksimal dari awal hingga akhir acara.</p>
+<button class="mt-4 px-6 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Pilih Paket</button>
+</div>
+</div>
+<div class="mt-xl fade-up">
+<h3 class="font-headline-md text-on-surface mb-6">MASIH BINGUNG PILIH YANG MANA?</h3>
+<p class="text-on-surface mb-6">Cek tabel perbandingan layanan kami untuk menentukan yang paling cocok untukmu.</p>
+<a class="text-on-surface underline font-bold hover:text-surface-container-lowest transition-colors" href="#">Lihat Perbandingan Lengkap</a>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-primary-container relative" id="how-it-works">
+<div class="max-w-[1280px] mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg fade-up">GIMANA CARANYA? Semudah ini. 🎓</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md text-center">
+<div class="fade-up p-4">
+<div class="w-16 h-16 mx-auto bg-surface-container-lowest text-primary rounded-full flex items-center justify-center font-bold text-xl mb-4">1</div>
+<h4 class="font-bold text-on-surface mb-2">Pilih Paket</h4>
+</div>
+<div class="fade-up delay-100 p-4">
+<div class="w-16 h-16 mx-auto bg-surface-container-lowest text-primary rounded-full flex items-center justify-center font-bold text-xl mb-4">2</div>
+<h4 class="font-bold text-on-surface mb-2">Konsultasi</h4>
+</div>
+<div class="fade-up delay-200 p-4">
+<div class="w-16 h-16 mx-auto bg-surface-container-lowest text-primary rounded-full flex items-center justify-center font-bold text-xl mb-4">3</div>
+<h4 class="font-bold text-on-surface mb-2">Konfirmasi</h4>
+</div>
+<div class="fade-up delay-300 p-4">
+<div class="w-16 h-16 mx-auto bg-surface-container-lowest text-primary rounded-full flex items-center justify-center font-bold text-xl mb-4">4</div>
+<h4 class="font-bold text-on-surface mb-2">Nikmati Hari H</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us & Service Area Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background relative" id="why-us">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="fade-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">KENAPA GRADSMATEASSIST? Karena Hari Wisudamu Bukan Saatnya Ribet.</h2>
+<ul class="space-y-4 text-on-surface">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-surface-container-lowest">check_circle</span> Tim Profesional &amp; Ramah</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-surface-container-lowest">check_circle</span> Mengerti Kebutuhan Fotografi</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-surface-container-lowest">check_circle</span> Sigap Dalam Situasi Darurat</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-surface-container-lowest">check_circle</span> Harga Terjangkau</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-surface-container-lowest">check_circle</span> Terpercaya di Banyak Kampus</li>
+</ul>
+</div>
+<div class="fade-up delay-200 bg-surface-container-lowest p-8 rounded-2xl">
+<h2 class="font-headline-md text-primary mb-4">HADIR DI HARI WISUDAMU 📍</h2>
+<p class="text-on-surface-variant mb-4">Kami melayani pendampingan wisuda di wilayah:</p>
+<div class="flex flex-col gap-2 font-bold text-primary">
+<span>✔️ Solo Raya (Surakarta, Sukoharjo, Karanganyar)</span>
+<span>✔️ Yogyakarta &amp; Sekitarnya</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-primary-container relative" id="faq">
+<div class="max-w-[800px] mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg text-center fade-up">PERTANYAAN YANG SERING DITANYAKAN 💌</h2>
+<div class="space-y-4 fade-up">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Apakah asisten akan mengambil foto menggunakan HP saya?</p><p class="text-on-surface-variant text-sm mt-2">Ya, asisten kami siap membantu mendokumentasikan dengan perangkat Anda.</p></div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Bisa request untuk membawakan buket bunga yang banyak?</p><p class="text-on-surface-variant text-sm mt-2">Tentu, itu salah satu layanan utama kami.</p></div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Bagaimana jika acara molor?</p><p class="text-on-surface-variant text-sm mt-2">Kami fleksibel dan akan berkoordinasi dengan Anda terkait penambahan waktu.</p></div>
+<!-- Remaining placeholder questions to represent all 7 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Pertanyaan lainnya 4?</p><p class="text-on-surface-variant text-sm mt-2">Hubungi CS kami untuk info lebih lanjut.</p></div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Pertanyaan lainnya 5?</p><p class="text-on-surface-variant text-sm mt-2">Hubungi CS kami untuk info lebih lanjut.</p></div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Pertanyaan lainnya 6?</p><p class="text-on-surface-variant text-sm mt-2">Hubungi CS kami untuk info lebih lanjut.</p></div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm"><p class="font-bold text-primary">Pertanyaan lainnya 7?</p><p class="text-on-surface-variant text-sm mt-2">Hubungi CS kami untuk info lebih lanjut.</p></div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background text-center relative">
+<div class="max-w-[800px] mx-auto fade-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">SATU HARI. SATU PENCAPAIAN. BANYAK KENANGAN. 🎓</h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-8">
+                READY TO ENJOY YOUR GRADUATION? 🎓 Mari buat hari istimewamu berjalan sempurna tanpa beban.
+            </p>
+<a class="inline-flex items-center justify-center h-14 px-10 rounded-full bg-surface-container-lowest text-primary font-bold text-lg hover:scale-105 transition-transform duration-200 shadow-soft" href="#book">
+                Booking GradsmateAssist
+            </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest border-t border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-lg">
+<div class="max-w-[1280px] mx-auto flex flex-col items-center gap-md">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim opacity-80 hover:opacity-100 transition-opacity" href="#">
+            GradsmateAssist
+        </a>
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#home">Beranda</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#packages">Paket</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#how-it-works">Cara Kerja</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#why-us">Mengapa Kami</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#faq">Tanya Jawab</a>
+<span class="text-primary-container">•</span>
+<span class="text-on-surface-variant">Solo Raya &amp; Jogja</span>
+</div>
+<p class="text-label-sm font-label-sm text-outline mt-4">
+            © 2026 GradsmateAssist. All rights reserved.
+        </p>
+</div>
+</footer>
+<script>
+    // Simple intersection observer for fade-up animations
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body></html>
