@@ -1,6 +1,8 @@
 import { FormEvent, useMemo, useState } from 'react';
-import { CalendarDays, Check, Clock3, Send } from 'lucide-react';
+import { CalendarDays, Check, Clock3, MessageCircle } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+
+const WHATSAPP_NUMBER = '6285865702681';
 
 type BookingFormValues = {
   graduateName: string;
@@ -66,6 +68,14 @@ export function BookingForm() {
       return;
     }
 
+    const message =
+      `Halo GradsmateAssist, saya ingin mengajukan booking teman wisuda.\n\n` +
+      `Nama wisudawan: ${values.graduateName.trim()}\n` +
+      `Tanggal: ${dayLabel}\n` +
+      `Jam: ${values.startTime} - ${values.endTime}\n` +
+      `Kebutuhan: ${values.needs.trim()}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+
     setValues(initialValues);
     setSubmitted(true);
   };
@@ -91,8 +101,8 @@ export function BookingForm() {
           <div className="form-row"><label className="form-field"><span>Mulai jam berapa</span><div className="time-field"><Clock3 size={17} /><input type="time" value={values.startTime} onChange={(event) => updateValue('startTime', event.target.value)} required /></div></label><label className="form-field"><span>Berakhir jam berapa</span><div className="time-field"><Clock3 size={17} /><input type="time" value={values.endTime} onChange={(event) => updateValue('endTime', event.target.value)} required /></div></label></div>
           <label className="form-field"><span>Kebutuhan teman wisuda</span><textarea value={values.needs} onChange={(event) => updateValue('needs', event.target.value)} placeholder="Contoh: bantu ambil foto dengan HP saya, bawakan buket, dan temani sampai sesi foto keluarga..." minLength={10} maxLength={2000} rows={4} required /></label>
           {errorMessage && <p className="form-message form-error" role="alert">{errorMessage}</p>}
-          {submitted && <p className="form-message form-success" role="status">Pengajuan booking berhasil dikirim. Kami akan segera menghubungimu.</p>}
-          <button className="button button-primary form-submit" type="submit" disabled={submitting}>{submitting ? 'Mengirim pengajuan...' : 'Kirim pengajuan'}<Send size={17} /></button>
+          {submitted && <p className="form-message form-success" role="status">Pengajuan tersimpan. Lanjut kirim ringkasan ke WhatsApp kami untuk konfirmasi.</p>}
+          <button className="button button-primary form-submit" type="submit" disabled={submitting}>{submitting ? 'Mengirim pengajuan...' : 'Kirim via WhatsApp'}<MessageCircle size={17} /></button>
         </form>
       </div>
     </section>
